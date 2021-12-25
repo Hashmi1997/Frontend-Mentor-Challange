@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="main-text">
+      <h1 class="main-text__title">Learn to code by watching others</h1>
+      <p class="main-text__desc">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+        understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div class="form-container">
+      <p class="promotion-banner">
+        <strong class="promotion-banner__strong">Try it free 7 days</strong> then $20/mo. thereafter
+      </p>
+      <form class="form">
+        <div class="form-group">
+          <label class="visually-hidden" for="firstname">First Name</label>
+          <!--
+            Set aria-invalid initially to "false" on required inputs,
+            otherwise they would be announced as invalid to screen-reader users.
+          -->
+          <input
+            id="firstname"
+            class="form-group__input"
+            type="text"
+            placeholder="First Name"
+            aria-invalid="false"
+            required
+          />
+          <p id="firstnameError" class="form-group__error-text">First Name cannot be empty</p>
+        </div>
+        <div class="form-group">
+          <label class="visually-hidden" for="lastname">Last Name</label>
+          <input
+            id="lastname"
+            class="form-group__input"
+            type="text"
+            placeholder="Last Name"
+            aria-invalid="false"
+            required
+          />
+          <p id="lastnameError" class="form-group__error-text">Last Name cannot be empty</p>
+        </div>
+        <div class="form-group">
+          <label class="visually-hidden" for="email">Email</label>
+          <input
+            id="email"
+            class="form-group__input"
+            type="email"
+            placeholder="Email Address"
+            aria-invalid="false"
+            required
+          />
+          <p id="emailError" class="form-group__error-text">Looks like this is not an email</p>
+        </div>
+        <div class="form-group">
+          <label class="visually-hidden" for="password">Password</label>
+          <input
+            id="password"
+            class="form-group__input"
+            type="password"
+            placeholder="Password"
+            aria-invalid="false"
+            required
+          />
+          <p id="passwordError" class="form-group__error-text">Password cannot be empty</p>
+        </div>
+        <button class="submit-btn" type="submit" aria-describedby="ts">Claim your free trial</button>
+
+        <p class="ts" id="ts">
+          By clicking the button, you are agreeing to our <a href="" class="ts__link">Terms and Services</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
